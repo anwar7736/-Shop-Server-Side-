@@ -11,7 +11,7 @@ class CartController extends Controller
     function CartAdd(Request $request){
         $invoice_no = rand(11111111,99999999);
         date_default_timezone_set("Asia/Dhaka");
-        $invoice_date= date('d-m-Y');
+        $invoice_date= date('Y-m-d');
         $product_name=$request->input('product_name');
         $product_qty=$request->input('product_qty');
         $user_id=$request->input('user_id');

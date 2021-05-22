@@ -29,6 +29,12 @@ class UserController extends Controller
         $result=UserModel::Where('id', $id)->delete();
         return  $result;
     }
+    function getUser(Request $request){
+      $id = $request->id;
+      $getUser = UserModel::where('id', $id)->first();
+      return $getUser;
+
+    }
 
     function SelectUser(){
         $result=UserModel::all();

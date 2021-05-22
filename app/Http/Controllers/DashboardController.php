@@ -32,31 +32,31 @@ class DashboardController extends Controller
         date_default_timezone_set('Asia/Dhaka');
 
         // Day 1
-        $myDate1 = date('d/m/Y');
+        $myDate1 = date('Y-m-d');
         $TotalIncome1= TransactionModel::where('invoice_date',$myDate1)->sum('product_total_price');
 
         // Day 2
-        $myDate2 = date("d/m/Y", strtotime("-1 day"));
+        $myDate2 = date("Y-m-d", strtotime("-1 day"));
         $TotalIncome2= TransactionModel::where('invoice_date',$myDate2)->sum('product_total_price');
 
         // Day 3
-        $myDate3 = date("d/m/Y", strtotime("-2 day"));
+        $myDate3 = date("Y-m-d", strtotime("-2 day"));
         $TotalIncome3= TransactionModel::where('invoice_date',$myDate3)->sum('product_total_price');
 
         // Day 4
-        $myDate4 = date("d/m/Y", strtotime("-3 day"));
+        $myDate4 = date("Y-m-d", strtotime("-3 day"));
         $TotalIncome4= TransactionModel::where('invoice_date',$myDate4)->sum('product_total_price');
 
         // Day 5
-        $myDate5 = date("d/m/Y", strtotime("-4 day"));
+        $myDate5 = date("Y-m-d", strtotime("-4 day"));
         $TotalIncome5= TransactionModel::where('invoice_date',$myDate5)->sum('product_total_price');
 
         // Day 6
-        $myDate6 = date("d/m/Y", strtotime("-5 day"));
+        $myDate6 = date("Y-m-d", strtotime("-5 day"));
         $TotalIncome6 = TransactionModel::where('invoice_date',$myDate6)->sum('product_total_price');
 
         // Day 7
-        $myDate7 = date("d/m/Y", strtotime("-6 day"));
+        $myDate7 = date("Y-m-d", strtotime("-6 day"));
         $TotalIncome7 = TransactionModel::where('invoice_date',$myDate7)->sum('product_total_price');
 
         $arr = array(

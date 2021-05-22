@@ -39,6 +39,13 @@ class CategoryController extends Controller
         $result= CategoryModel::all();
         return $result;
     }
+    
+    function getCategory(Request $request){
+        $id = $request->id;
+        $result= CategoryModel::where('id', $id)->first();
+        return $result;
+    }
+
 
 
     function UpdateCategory(Request $request){

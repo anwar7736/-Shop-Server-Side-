@@ -25,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 //User
 Route::post('/AddUser',[UserController::class,'AddUser']);
 Route::get('/DeleteUser/{id}',[UserController::class,'DeleteUser']);
+Route::get('/getUser/{id}',[UserController::class,'getUser']);
 Route::get('/SelectUser',[UserController::class,'SelectUser']);
 Route::post('/UpdateUser',[UserController::class,'UpdateUser']);
 
@@ -33,6 +34,7 @@ Route::post('/UpdateUser',[UserController::class,'UpdateUser']);
 
 Route::post('/AddCategory',[CategoryController::class,'AddCategory']);
 Route::get('/SelectCategory',[CategoryController::class,'SelectCategory']);
+Route::get('/getCategory/{id}',[CategoryController::class,'getCategory']);
 Route::get('/DeleteCategory/{id}',[CategoryController::class,'DeleteCategory']);
 Route::post('/UpdateCategory',[CategoryController::class,'UpdateCategory']);
 
