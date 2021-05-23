@@ -50,7 +50,12 @@ class ProductController extends Controller
     }
 
 
-    function SelectProductByCategory(Request $request){
+    function getProduct(Request $request){
+        $id= $request->id;
+        $result= ProductModel::Where('id',$id)->first();
+        return $result;
+    }
+	function SelectProductByCategory(Request $request){
         $Category= $request->Category;
         $result= ProductModel::Where('product_category',$Category)->get();
         return $result;
@@ -77,7 +82,10 @@ class ProductController extends Controller
                 "product_category"=>$product_category,
                 "product_remarks"=>$product_remarks
                 ]);
-                return $result;
+                if($result==true || $result==false)
+				  {	
+					return 1;
+				  }
             }
             else{
                 $products = ProductModel::where('id', $id)->get();
@@ -90,6 +98,10 @@ class ProductController extends Controller
                     "product_category"=>$product_category,
                     "product_remarks"=>$product_remarks,
                 ]);
+				 if($result==true || $result==false)
+				  {	
+					return 1;
+				  }
             }
         }
         else{

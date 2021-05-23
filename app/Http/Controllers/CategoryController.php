@@ -59,14 +59,20 @@ class CategoryController extends Controller
               if(empty($image))
               {
                   $result= CategoryModel::Where('id', $id)->update(['cat_name'=>$name]);
-                  return $result;
+                  if($result==true || $result==false)
+				  {	
+					return 1;
+				  }
               }
               else{
                  $cat_icon= CategoryModel::Where('id',$id)->get(['cat_icon']);
                  Storage::delete($cat_icon[0]['cat_icon']);
                  $imagePath= $image->store('public');
                  $result= CategoryModel::Where('id', $id)->update(['cat_name'=>$name,'cat_icon'=>$imagePath]);
-                 return $result;
+                 if($result==true || $result==false)
+				  {	
+					return 1;
+				  }
               }
            }
            else{

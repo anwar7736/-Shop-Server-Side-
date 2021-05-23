@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2021 at 04:41 PM
+-- Generation Time: May 23, 2021 at 07:04 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -59,17 +59,14 @@ CREATE TABLE `category_list` (
 --
 
 INSERT INTO `category_list` (`id`, `cat_name`, `cat_code`, `cat_icon`) VALUES
-(1, 'Mobile', '1621436966', 'public/MQuhKFQLkZ0VRNA8PkjWfwZJpTqea5BulrF0oIg1.jpg'),
+(1, 'Mobile', '1621436966', 'public/n1OgCJRiisrBnm6UALxEYa9YpUfRcbO74Hm77OP8.jpg'),
 (4, 'LED TV', '1621437449', 'public/fLc4sJ9bT0UvTQndTUXiOhzjRgNWWFKeLx71G8Zi.jpg'),
 (5, 'Laptop', '1621437463', 'public/Y4u26lsagpyWLOFY81qZvFDjPHyPxnxS0ep0Is85.jpg'),
 (9, 'Air Conditioner', '1621438659', 'public/6UbpPJQHyWBDABKxhQcMW8cxeHrUCp7LwL8TMByq.jpg'),
-(10, 'Mobile', '1621436966', 'public/MQuhKFQLkZ0VRNA8PkjWfwZJpTqea5BulrF0oIg1.jpg'),
-(11, 'LED TV', '1621437449', 'public/fLc4sJ9bT0UvTQndTUXiOhzjRgNWWFKeLx71G8Zi.jpg'),
-(12, 'Laptop', '1621437463', 'public/Y4u26lsagpyWLOFY81qZvFDjPHyPxnxS0ep0Is85.jpg'),
-(13, 'Air Conditioner', '1621438659', 'public/6UbpPJQHyWBDABKxhQcMW8cxeHrUCp7LwL8TMByq.jpg'),
-(14, 'Mobile', '1621436966', 'public/MQuhKFQLkZ0VRNA8PkjWfwZJpTqea5BulrF0oIg1.jpg'),
-(15, 'LED TV', '1621437449', 'public/fLc4sJ9bT0UvTQndTUXiOhzjRgNWWFKeLx71G8Zi.jpg'),
-(16, 'Laptop', '1621437463', 'public/Y4u26lsagpyWLOFY81qZvFDjPHyPxnxS0ep0Is85.jpg');
+(14, 'Music Player', '1621436966', 'public/1C9uaKHQjDrjbQot657XuAmcsN95pnFGLMmdKN1L.jpg'),
+(27, 'Lenovo Mobile', '1621783539', 'public/vLRakdS2Uz9hS2GBHqKERakmqkwKegEgsGg3XTXY.jpg'),
+(29, 'Fruits', '1621784187', 'public/WFNGVVa0KZzjUyFIs24ayUjF3BPR8k9aKUUskvR4.jpg'),
+(30, 'Electronics', '1621784262', 'public/zUcjM1ncFAYyPEgUUKfXtIV4EAHFWqIDrMdMepyB.jpg');
 
 -- --------------------------------------------------------
 
@@ -115,9 +112,9 @@ CREATE TABLE `product_list` (
 --
 
 INSERT INTO `product_list` (`id`, `product_name`, `product_code`, `product_icon`, `product_price`, `product_category`, `product_remarks`) VALUES
-(1, 'Xiaomi Redmi Note 7 Pro', '1621532589', 'localhost:8000/public/UZN8hQyPyyiAxrg2EJGmZcdjQWJ4EeVq2NQmd97d.jpg', '17500', 'Mobile', 'Best Mobile Phone'),
-(2, 'Xiaomi Redmi Note 8 Pro', '1621532631', 'public/AOLT7vaCM1KMXGVCn0TrMz4tguVgvyztse4ZS8sV.jpg', '19500', 'Mobile', 'Best Mobile Phone'),
-(3, 'Xiaomi Redmi Note 9 Pro', '1621532854', 'public/8gR4pPBW8VHfFCZxWFjWsmgJoK2CSCYW65YWuHS7.jpg', '21000', 'Mobile', 'Best Mobile Phone'),
+(1, 'Xiaomi Redmi Note 7 Pro', '1621532589', 'public/kcspO5GlDKmdSmTImmtC0du35iV7dMwkogWte2NN.jpg', '17500', 'Mobile', 'Best Mobile Phone'),
+(2, 'Xiaomi Redmi Note 8 Pro', '1621532631', 'public/raA7jYcfPYlT6tnmllUOxoUSO7HYeXIN4LQcq7Gv.jpg', '19500', 'Mobile', 'Best Mobile Phone'),
+(3, 'Xiaomi Redmi Note 9 Pro', '1621532854', 'public/i4A5UrHryMkinGrWVwIdfXwWB82jcWyqJR4AoTen.jpg', '21000', 'Mobile', 'Best Mobile Phone'),
 (7, 'Walton Laptop', '1621533154', 'public/F2AuDtF7ufETmg7hCRHGbHOHs9ntHoE2A13NxhE9.jpg', '30000', 'Laptop', 'Best Mobile Phone'),
 (8, 'HP Laptop', '1621533168', 'public/0UfXS9I7PsGazoaEKriZ7Gv9Cl55Nkpa2VP0faTR.jpg', '30000', 'Laptop', 'Best Mobile Phone'),
 (9, 'SONY LED TV', '1621533205', 'public/BhbfDhRlQB6UOwKPsQTJUz6Ie1qmYLfEiJh0OzXg.jpg', '11000', 'TV', 'Best Mobile Phone'),
@@ -131,7 +128,13 @@ INSERT INTO `product_list` (`id`, `product_name`, `product_code`, `product_icon`
 (19, 'Walton Laptop', '1621533154', 'public/F2AuDtF7ufETmg7hCRHGbHOHs9ntHoE2A13NxhE9.jpg', '30000', 'Laptop', 'Best Mobile Phone'),
 (20, 'HP Laptop', '1621533168', 'public/0UfXS9I7PsGazoaEKriZ7Gv9Cl55Nkpa2VP0faTR.jpg', '30000', 'Laptop', 'Best Mobile Phone'),
 (21, 'SONY LED TV', '1621533205', 'public/BhbfDhRlQB6UOwKPsQTJUz6Ie1qmYLfEiJh0OzXg.jpg', '11000', 'TV', 'Best Mobile Phone'),
-(22, 'Xiaomi Redmi Note 7 Pro', '1621532589', 'public/UZN8hQyPyyiAxrg2EJGmZcdjQWJ4EeVq2NQmd97d.jpg', '17500', 'Mobile', 'Best Mobile Phone');
+(22, 'Xiaomi Redmi Note 7 Pro', '1621532589', 'public/UZN8hQyPyyiAxrg2EJGmZcdjQWJ4EeVq2NQmd97d.jpg', '17500', 'Mobile', 'Best Mobile Phone'),
+(26, 'adsfdsfsfd', '1621786198', 'public/4KYMES5HVwDzX6oSJEydkiNZOIGjAirMZCBetfLq.jpg', '125', 'LED TV', 'asdffsafds'),
+(27, 'HP Laptops', '1621786359', 'public/bkspeuI6nvzgslzSmKpLAYSZ43oOMgJZJ17LUiN1.jpg', 'asdsddsdfsdfa', 'Air Conditioner', 'asdsdfdfsdfsdf'),
+(29, 'asdfsddssd', '1621786601', 'public/XnpXn3v698zLkV1AyJkWQ0Z1k1VDO1pTB1RQV1Ss.jpg', 'asdsdsdfdfdsfsdfs', 'undefined', 'sdadsfff'),
+(30, 'asdffdsads', '1621786659', 'public/nhv035i0PkctQDpTwbhNgvC28rlyKjd3k2BgFCYM.jpg', 'asdfsdfafdssfd', 'Mobile', 'asdffsdsdfafds'),
+(31, 'VIVO Mobile', '1621786835', 'public/NAGJff1Q15tMQIgDg6GIjTK9C87g5js8cWh0h2CA.jpg', '12000', 'Mobile', 'Good'),
+(32, 'Walton LED TV', '1621786931', 'public/hpklbX5gmLopCmqYhXhPJMghi9nCBg6SIgW8RoXi.jpg', '12000', 'LED TV', 'You can buy');
 
 -- --------------------------------------------------------
 
@@ -193,7 +196,7 @@ CREATE TABLE `user_list` (
 --
 
 INSERT INTO `user_list` (`id`, `fullname`, `username`, `roll`, `lastactivity`, `password`) VALUES
-(1, 'Md Anwar Hossain', 'anwar', 'Admin', 'No Activity', '$2y$10$zRQtLaQNdSuu19jx/NJbi.6C5OPBZwvtDYusLCV9HJuFh4Pav7Aay'),
+(1, 'Md Anwar Hossain', 'anwar', 'Admin', 'No Activity', '$2y$10$Pq4h/xFK6ApPhnwltCo39O3p2hnqo/ZUia7BUwkHbInwedlaMFbme'),
 (5, 'Md Anwar Hossain', 'hossain', 'Worker', 'No Activity', '$2y$10$LpxxZpOCbJcTuGgLR9uAmOnbt/Xjf4ZIFS3xh6G9ooFS3lQSLueUC'),
 (9, 'Md Anwar Hossain', 'hossain', 'Worker', 'No Activity', '$2y$10$IjBXiIJ5v35nYlPoXil1BOvNc8rHU6tUAi5ye5cTliCwEW12KaOCa'),
 (10, 'Md Anwar Hossain', 'hossain', 'Worker', 'No Activity', '$2y$10$IjBXiIJ5v35nYlPoXil1BOvNc8rHU6tUAi5ye5cTliCwEW12KaOCa'),
@@ -207,10 +210,7 @@ INSERT INTO `user_list` (`id`, `fullname`, `username`, `roll`, `lastactivity`, `
 (28, 'asdf', 'asdfasddsa', 'Worker', 'No Activity', '$2y$10$RGdf99yOM/.vguuM.8RtZ.FqmO75ib2vVT8hPOOOpWueAXrcH/eEO'),
 (29, 'asdf', 'asdfasdf', 'Admin', 'No Activity', '$2y$10$jXaaVYjhGBZOFL74nZMRku9VqkdBEYTDRdUu3mg/gH0jJzP8uVtna'),
 (30, 'asdfa', 'sadsdfssfd', 'Worker', 'No Activity', '$2y$10$Za7La6PJPvg89HD30VH5CeWSX/mqSEw7VhxEOArK8m7xtriBBPVpK'),
-(31, 'asdf', 'asdfadsfsadf', 'Worker', 'No Activity', '$2y$10$oHbawH.cArtVb0TnN98ef.5j0uWn4Tls/hrXlVGHy6Gbi99u59uaW'),
-(34, 'Md Anwar Hossain', 'anwarffff', 'Admin', 'No Activity', '$2y$10$Vg3S54DgIpTW833yfUq3SO8XlmQOXfCI5ljbsnY.9Tt0aT5.O8EMS'),
-(35, 'asdfadfsadfs', 'adsfads', 'Admin', 'No Activity', '$2y$10$cmPmYSRJ1ByYVM.MbtJf/.x6ko1X6O4B.XeqGy7JSrYRoV9pp/2uu'),
-(36, 'adsasdf', 'asdffdsfd', 'Worker', 'No Activity', '$2y$10$4sWt25tQY9MuMDlVYzWCU.7Vv1yeTGyFmu/yEIl8IFIKAxgD0QKXu');
+(31, 'asdf', 'asdfadsfsadf', 'Worker', 'No Activity', '$2y$10$oHbawH.cArtVb0TnN98ef.5j0uWn4Tls/hrXlVGHy6Gbi99u59uaW');
 
 --
 -- Indexes for dumped tables
@@ -266,7 +266,7 @@ ALTER TABLE `cart_list`
 -- AUTO_INCREMENT for table `category_list`
 --
 ALTER TABLE `category_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -278,7 +278,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `product_list`
 --
 ALTER TABLE `product_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `transaction_list`
@@ -290,7 +290,7 @@ ALTER TABLE `transaction_list`
 -- AUTO_INCREMENT for table `user_list`
 --
 ALTER TABLE `user_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
