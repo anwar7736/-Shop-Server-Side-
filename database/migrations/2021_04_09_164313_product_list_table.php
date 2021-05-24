@@ -18,7 +18,7 @@ class ProductListTable extends Migration
             $table->string('product_name',200);
             $table->string('product_code',200);
             $table->string('product_icon',200);
-            $table->string('product_price',200);
+            $table->integer('product_price',200);
             $table->string('product_category',200);
             $table->string('product_remarks',200);
         });
@@ -32,6 +32,6 @@ class ProductListTable extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('product_list');
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CurrentStockController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReportController;
@@ -70,7 +71,10 @@ Route::get('/CartSale/{user_id}',[TransactionController::class,'CartSale']);
 //Report
 Route::get('/TransactionList',[ReportController::class,'TransactionList']);
 Route::post('/TransactionListByDate',[ReportController::class,'TransactionListByDate']);
+Route::get('/CurrentStockReport',[CurrentStockController::class,'CurrentStockReport']);
 
+//Current Stock 
+Route::post('/UpdateCurrentStock',[CurrentStockController::class,'UpdateCurrentStock']);
 
 
 

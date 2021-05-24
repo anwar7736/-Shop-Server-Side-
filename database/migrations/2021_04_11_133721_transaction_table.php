@@ -18,9 +18,9 @@ class TransactionTable extends Migration
             $table->string('invoice_no',200);
             $table->date('invoice_date',200);
             $table->string('product_name',200);
-            $table->string('product_qty',200);
-            $table->string('product_unit_price',200);
-            $table->string('product_total_price',200);
+            $table->integer('product_qty',200);
+            $table->integer('product_unit_price',200);
+            $table->integer('product_total_price',200);
             $table->string('seller_name',200);
             $table->string('user_name',200);
             $table->string('product_icon',200);
@@ -35,6 +35,6 @@ class TransactionTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('transaction_list');
     }
 }

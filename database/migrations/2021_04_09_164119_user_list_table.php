@@ -31,6 +31,6 @@ class UserListTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('user_list');
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CategoryModel;
+use App\Models\CurrentStockModel;
 use App\Models\ProductModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -26,8 +27,18 @@ class ProductController extends Controller
              "product_icon"=>$product_icon,
              "product_price"=>$product_price,
              "product_category"=>$product_category,
-             "product_remarks"=>$product_remarks,
+             "product_remarks"=>$product_remarks
         ]);
+        $result=CurrentStockModel::insert([
+             "product_name"=>$product_name,
+             "product_code"=>$product_code,
+             "product_icon"=>$product_icon,
+             "product_price"=>$product_price,
+             "product_qty"=>'0',
+             "total_price"=>'0',
+             "product_category"=>$product_category,
+             "product_remarks"=>$product_remarks
+         ]);
         return $result;
         }
         else{
@@ -41,6 +52,7 @@ class ProductController extends Controller
         $products= ProductModel::Where('id',$id)->get();
         Storage::delete($products[0]['product_icon']);
         $result=ProductModel::Where('id', $id)->delete();
+        $result=CurrentStockModel::Where('id', $id)->delete();
         return  $result;
     }
 
@@ -81,6 +93,12 @@ class ProductController extends Controller
                 "product_price"=>$product_price,
                 "product_category"=>$product_category,
                 "product_remarks"=>$product_remarks
+                ]); 
+                $result= CurrentStockModel::Where('id', $id)->update([
+                "product_name"=>$product_name,
+                "product_price"=>$product_price,
+                "product_category"=>$product_category,
+                "product_remarks"=>$product_remarks
                 ]);
                 if($result==true || $result==false)
 				  {	
@@ -92,6 +110,13 @@ class ProductController extends Controller
                 Storage::delete($products[0]['product_icon']);
                 $product_icon = $image->store('public');
                 $result = ProductModel::where('id', $id)->update([
+                    "product_name"=>$product_name,
+                    "product_icon"=>$product_icon,
+                    "product_price"=>$product_price,
+                    "product_category"=>$product_category,
+                    "product_remarks"=>$product_remarks,
+                ]);
+                $result = CurrentStockModel::where('id', $id)->update([
                     "product_name"=>$product_name,
                     "product_icon"=>$product_icon,
                     "product_price"=>$product_price,

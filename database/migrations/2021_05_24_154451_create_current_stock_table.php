@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CartTable extends Migration
+class CreateCurrentStockTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,16 @@ class CartTable extends Migration
      */
     public function up()
     {
-        Schema::create('cart_list',function (Blueprint $table){
+        Schema::create('current_stock', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('invoice_no',200);
-            $table->date('invoice_date',200);
             $table->string('product_name',200);
-            $table->integer('product_qty',200);
-            $table->integer('product_unit_price',200);
-            $table->integer('product_total_price',200);
-            $table->string('seller_name',200);
-            $table->string('user_id',200);
+            $table->string('product_code',200);
             $table->string('product_icon',200);
+            $table->string('product_category',200);
+            $table->integer('product_price',200);
+            $table->integer('product_qty',200);
+            $table->integer('total_price',200);
+            $table->string('product_remarks',200);
         });
     }
 
@@ -34,6 +33,6 @@ class CartTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cart_list');
+        Schema::dropIfExists('current_stock');
     }
 }
