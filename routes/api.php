@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CurrentStockController;
@@ -21,7 +22,8 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+//Login
+Route::post('/login', [LoginController::class,'onLogin']);
 
 //User
 Route::post('/AddUser',[UserController::class,'AddUser']);
@@ -29,7 +31,6 @@ Route::get('/DeleteUser/{id}',[UserController::class,'DeleteUser']);
 Route::get('/getUser/{id}',[UserController::class,'getUser']);
 Route::get('/SelectUser',[UserController::class,'SelectUser']);
 Route::post('/UpdateUser',[UserController::class,'UpdateUser']);
-
 
 //Category
 
