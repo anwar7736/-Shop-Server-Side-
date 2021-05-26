@@ -63,6 +63,7 @@ Route::get('/CartItemPlus/{id}/{quantity}/{price}',[CartController::class,'CartI
 Route::get('/CartItemMinus/{id}/{quantity}/{price}',[CartController::class,'CartItemMinus']);
 Route::get('/RemoveCartList/{id}',[CartController::class,'RemoveCartList']);
 Route::get('/CartList/{user_id}',[CartController::class,'CartList']);
+Route::get('/TotalOrderValue/{user_id}',[CartController::class,'TotalOrderValue']);
 
 
 // Transaction

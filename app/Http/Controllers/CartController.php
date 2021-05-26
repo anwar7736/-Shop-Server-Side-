@@ -17,7 +17,7 @@ class CartController extends Controller
         $user_id=$request->input('user_id');
         $product_unit_price=$request->input('product_unit_price');
         $seller_name=$request->input('seller_name');
-        $image=$request->file('product_icon');
+        $image=$request->input('product_icon');
         $total_price=$product_unit_price * $product_qty;
 
         $isInsert = CartModel::where('product_name', $product_name)->where('user_id', $user_id)->count();
@@ -34,7 +34,7 @@ class CartController extends Controller
         return $result;
         }
         else{
-        $product_icon = $image->store('public');
+        //$product_icon = $image->store('images');
 
         $result=CartModel::insert([
             "invoice_no"=>$invoice_no,
@@ -45,7 +45,7 @@ class CartController extends Controller
             "product_total_price"=>$total_price,
             "seller_name"=>$seller_name,
             "user_id"=>$user_id,
-            "product_icon"=>$product_icon,
+            "product_icon"=>$image,
         ]);
         return $result;
      }
@@ -82,6 +82,11 @@ class CartController extends Controller
     function CartList(Request $request){
         $user_id=$request->user_id;
         $result=CartModel::Where('user_id',$user_id)->get();
+        return $result;
+    }
+    function TotalOrderValue(Request $request){
+        $user_id=$request->user_id;
+        $result=CartModel::Where('user_id',$user_id)->sum('product_total_price');
         return $result;
     }
 }

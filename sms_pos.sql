@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2021 at 09:46 PM
+-- Generation Time: May 26, 2021 at 06:13 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -41,6 +41,18 @@ CREATE TABLE `cart_list` (
   `product_icon` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `cart_list`
+--
+
+INSERT INTO `cart_list` (`id`, `invoice_no`, `invoice_date`, `product_name`, `product_qty`, `product_unit_price`, `product_total_price`, `seller_name`, `user_id`, `product_icon`) VALUES
+(1, '67233596', '2021-05-26', 'Vivo Y11', '4', '12999', '51996', 'Md Anwar Hossain', '1', 'public/9Z96Srq8riZ7KOjbJj3eLFk2cgkETj4xjuhoCtOb.jpg'),
+(2, '32662086', '2021-05-26', 'Vivo ZX Pro', '3', '15000', '45000', 'Md Anwar Hossain', '1', 'public/9Z96Srq8riZ7KOjbJj3eLFk2cgkETj4xjuhoCtOb.jpg'),
+(3, '13132545', '2021-05-26', 'Remax Original', '4', '250', '1000', 'Md Anwar Hossain', '1', 'public/9Z96Srq8riZ7KOjbJj3eLFk2cgkETj4xjuhoCtOb.jpg'),
+(4, '44168963', '2021-05-26', 'Walton TV 21\"', '4', '9000', '36000', 'Md Anwar Hossain', '1', 'public/9Z96Srq8riZ7KOjbJj3eLFk2cgkETj4xjuhoCtOb.jpg'),
+(5, '53177125', '2021-05-26', 'HP Laptop', '4', '45000', '180000', 'Md Anwar Hossain', '1', 'public/jpap6eZN07bhiuxE2ILa46oeV5rJBCePtcRffMmQ.jpg'),
+(6, '76246823', '2021-05-26', 'Samsung LED Montor', '3', '8000', '24000', 'Md Anwar Hossain', '1', 'public/avzu1idq8aXtgNxFuA7OYWoI1BS9mW7VX6nDGehC.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -63,7 +75,11 @@ INSERT INTO `category_list` (`id`, `cat_name`, `cat_code`, `cat_icon`) VALUES
 (2, 'TV', '1621873368', 'public/Klo4Jtggx9dTYidYQI9nPPvsul97sZHYYr5VZpF7.jpg'),
 (3, 'Laptop', '1621873376', 'public/83fnY8CErO9FOVtpg3njRvjhpTsJkU1JxtC6qDVU.jpg'),
 (4, 'Monitor', '1621873388', 'public/RexfIsb8FeUkjhDnkFfvN94BtsatW04hIaU2Kuey.jpg'),
-(5, 'Headphone', '1621873401', 'public/YxRehg12kNHeAn2OjLRJVPUy47lYarLxgyiWnYHH.jpg');
+(5, 'Headphone', '1621873401', 'public/YxRehg12kNHeAn2OjLRJVPUy47lYarLxgyiWnYHH.jpg'),
+(6, 'Refrigerator', '1622040197', 'public/iJSSFPK0dR3NSaNwW8BTCFV1OYRDONBO3UXrvRph.jpg'),
+(7, 'Desktop PC', '1622040245', 'public/7BDcg5DjuJWPrlLj7RGrumKjvZFkQx6Dy8MGsu7A.jpg'),
+(8, 'Printer', '1622040256', 'public/wpsXLGXaB0QIaBLsCxLdJ3fQEy5VDI4ppICBm4ac.jpg'),
+(9, 'Harware Accessories', '1622040276', 'public/RFsPVMePaVbiM7LpXDOXbdFTbkrCXcwPD5RTr7pI.jpg');
 
 -- --------------------------------------------------------
 
@@ -88,12 +104,12 @@ CREATE TABLE `current_stock` (
 --
 
 INSERT INTO `current_stock` (`id`, `product_name`, `product_code`, `product_icon`, `product_category`, `product_price`, `product_qty`, `total_price`, `product_remarks`) VALUES
-(1, 'Vivo ZX Pro', '1621873441', 'public/uJDdtoUI7VhYztgGhbjzfKQVSQfbDBbqNodISROi.jpg', 'Mobile', 15000, 2, 30000, 'Good things'),
-(2, 'Vivo Y11', '1621873482', 'public/2fnU4QJVCeu29OKfF74w8J3xPtmYGrfW2UQWfjJe.jpg', 'Mobile', 12999, 1, 12999, 'Good things'),
-(3, 'Walton TV 21\"', '1621873511', 'public/9Z96Srq8riZ7KOjbJj3eLFk2cgkETj4xjuhoCtOb.jpg', 'TV', 9000, 1, 9000, 'Good things'),
-(4, 'HP Laptop', '1621873536', 'public/jpap6eZN07bhiuxE2ILa46oeV5rJBCePtcRffMmQ.jpg', 'Laptop', 45000, 1, 45000, 'Good things'),
-(5, 'Samsung LED Montor', '1621873579', 'public/avzu1idq8aXtgNxFuA7OYWoI1BS9mW7VX6nDGehC.jpg', 'Monitor', 8000, 1, 8000, 'Good things'),
-(6, 'Remax Original', '1621873607', 'public/XbdyIO6nKFST9j7joe1Ce7k9aT9P6FkOMVAuzI9p.jpg', 'Headphone', 250, 1, 250, 'Good things');
+(1, 'Vivo ZX Pro', '1621873441', 'public/uJDdtoUI7VhYztgGhbjzfKQVSQfbDBbqNodISROi.jpg', 'Mobile', 15000, 6, 90000, 'Good things'),
+(2, 'Vivo Y11', '1621873482', 'public/2fnU4QJVCeu29OKfF74w8J3xPtmYGrfW2UQWfjJe.jpg', 'Mobile', 12999, 10, 129990, 'Good things'),
+(3, 'Walton TV 21\"', '1621873511', 'public/9Z96Srq8riZ7KOjbJj3eLFk2cgkETj4xjuhoCtOb.jpg', 'TV', 9000, 5, 45000, 'Good things'),
+(4, 'HP Laptop', '1621873536', 'public/jpap6eZN07bhiuxE2ILa46oeV5rJBCePtcRffMmQ.jpg', 'Laptop', 45000, 5, 225000, 'Good things'),
+(5, 'Samsung LED Montor', '1621873579', 'public/avzu1idq8aXtgNxFuA7OYWoI1BS9mW7VX6nDGehC.jpg', 'Monitor', 8000, 8, 64000, 'Good things'),
+(6, 'Remax Original', '1621873607', 'public/XbdyIO6nKFST9j7joe1Ce7k9aT9P6FkOMVAuzI9p.jpg', 'Headphone', 250, 20, 5000, 'Good things');
 
 -- --------------------------------------------------------
 
@@ -145,7 +161,25 @@ INSERT INTO `product_list` (`id`, `product_name`, `product_code`, `product_icon`
 (3, 'Walton TV 21\"', '1621873511', 'public/9Z96Srq8riZ7KOjbJj3eLFk2cgkETj4xjuhoCtOb.jpg', '9000', 'TV', 'Good things'),
 (4, 'HP Laptop', '1621873536', 'public/jpap6eZN07bhiuxE2ILa46oeV5rJBCePtcRffMmQ.jpg', '45000', 'Laptop', 'Good things'),
 (5, 'Samsung LED Montor', '1621873579', 'public/avzu1idq8aXtgNxFuA7OYWoI1BS9mW7VX6nDGehC.jpg', '8000', 'Monitor', 'Good things'),
-(6, 'Remax Original', '1621873607', 'public/XbdyIO6nKFST9j7joe1Ce7k9aT9P6FkOMVAuzI9p.jpg', '250', 'Headphone', 'Good things');
+(6, 'Remax Original', '1621873607', 'public/XbdyIO6nKFST9j7joe1Ce7k9aT9P6FkOMVAuzI9p.jpg', '250', 'Headphone', 'Good things'),
+(7, 'Vivo ZX Pro', '1621873557', 'public/uJDdtoUI7VhYztgGhbjzfKQVSQfbDBbqNodISROi.jpg', '15000', 'Mobile', 'Good things'),
+(8, 'Vivo Y11', '1621873475', 'public/2fnU4QJVCeu29OKfF74w8J3xPtmYGrfW2UQWfjJe.jpg', '12999', 'Mobile', 'Good things'),
+(9, 'Walton TV 21\"', '1621873547', 'public/9Z96Srq8riZ7KOjbJj3eLFk2cgkETj4xjuhoCtOb.jpg', '9000', 'TV', 'Good things'),
+(10, 'HP Laptop', '1621873554', 'public/jpap6eZN07bhiuxE2ILa46oeV5rJBCePtcRffMmQ.jpg', '45000', 'Laptop', 'Good things'),
+(11, 'Samsung LED Montor', '1621873542', 'public/avzu1idq8aXtgNxFuA7OYWoI1BS9mW7VX6nDGehC.jpg', '8000', 'Monitor', 'Good things'),
+(12, 'Remax Original', '1621873614', 'public/XbdyIO6nKFST9j7joe1Ce7k9aT9P6FkOMVAuzI9p.jpg', '250', 'Headphone', 'Good things'),
+(13, 'Vivo ZX Pro', '1621873414', 'public/uJDdtoUI7VhYztgGhbjzfKQVSQfbDBbqNodISROi.jpg', '15000', 'Mobile', 'Good things'),
+(14, 'Vivo Y11', '1621873482', 'public/2fnU4QJVCeu29OKfF74w8J3xPtmYGrfW2UQWfjJe.jpg', '12999', 'Mobile', 'Good things'),
+(15, 'Walton TV 21\"', '1621873511', 'public/9Z96Srq8riZ7KOjbJj3eLFk2cgkETj4xjuhoCtOb.jpg', '9000', 'TV', 'Good things'),
+(16, 'HP Laptop', '1621873536', 'public/jpap6eZN07bhiuxE2ILa46oeV5rJBCePtcRffMmQ.jpg', '45000', 'Laptop', 'Good things'),
+(17, 'Samsung LED Montor', '1621873578', 'public/avzu1idq8aXtgNxFuA7OYWoI1BS9mW7VX6nDGehC.jpg', '8000', 'Monitor', 'Good things'),
+(18, 'Remax Original', '1621873625', 'public/XbdyIO6nKFST9j7joe1Ce7k9aT9P6FkOMVAuzI9p.jpg', '250', 'Headphone', 'Good things'),
+(19, 'Vivo ZX Pro', '1621873543', 'public/uJDdtoUI7VhYztgGhbjzfKQVSQfbDBbqNodISROi.jpg', '15000', 'Mobile', 'Good things'),
+(20, 'Vivo Y11', '1621873456', 'public/2fnU4QJVCeu29OKfF74w8J3xPtmYGrfW2UQWfjJe.jpg', '12999', 'Mobile', 'Good things'),
+(21, 'Walton TV 21\"', '1621873574', 'public/9Z96Srq8riZ7KOjbJj3eLFk2cgkETj4xjuhoCtOb.jpg', '9000', 'TV', 'Good things'),
+(22, 'HP Laptop', '1621873572', 'public/jpap6eZN07bhiuxE2ILa46oeV5rJBCePtcRffMmQ.jpg', '45000', 'Laptop', 'Good things'),
+(23, 'Samsung LED Montor', '1621873573', 'public/avzu1idq8aXtgNxFuA7OYWoI1BS9mW7VX6nDGehC.jpg', '8000', 'Monitor', 'Good things'),
+(24, 'Remax Original', '1621873612', 'public/XbdyIO6nKFST9j7joe1Ce7k9aT9P6FkOMVAuzI9p.jpg', '250', 'Headphone', 'Good things');
 
 -- --------------------------------------------------------
 
@@ -180,6 +214,13 @@ CREATE TABLE `user_list` (
   `lastactivity` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `user_list`
+--
+
+INSERT INTO `user_list` (`id`, `fullname`, `username`, `roll`, `lastactivity`, `password`) VALUES
+(1, 'Md Anwar Hossain', 'anwar', 'Admin', 'No Activity', '$2y$10$qUOVzxl8N.XRkC02I6JwAeEwAcD3FC5xSMtKhuwnhXXTXEpnjGMZa');
 
 --
 -- Indexes for dumped tables
@@ -235,13 +276,13 @@ ALTER TABLE `user_list`
 -- AUTO_INCREMENT for table `cart_list`
 --
 ALTER TABLE `cart_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `category_list`
 --
 ALTER TABLE `category_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `current_stock`
@@ -259,7 +300,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `product_list`
 --
 ALTER TABLE `product_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `transaction_list`
@@ -271,7 +312,7 @@ ALTER TABLE `transaction_list`
 -- AUTO_INCREMENT for table `user_list`
 --
 ALTER TABLE `user_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
