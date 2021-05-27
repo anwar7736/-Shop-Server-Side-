@@ -54,30 +54,37 @@ class CartController extends Controller
 
     function CartItemPlus(Request $request){
         $id=$request->id;
-        $quantity=$request->quantity;
-        $price=$request->price;
-        $newQuantity=$quantity+1;
+        $cart = CartModel::where('id', $id)->get();
+        $price=$cart[0]['product_unit_price'];
+        $old_qty = $cart[0]['product_qty'];
+        $newQuantity=$old_qty+1;
         $total_price=$newQuantity*$price;
         $result=CartModel::Where('id',$id)->update(['product_qty' => $newQuantity, 'product_total_price' => $total_price]);
-        return $result;
-    }
-
-    function RemoveCartList(Request $request){
-        $id=$request->id;
-        $result=CartModel::Where('id',$id)->delete();
         return $result;
     }
 
     function CartItemMinus(Request $request){
         $id=$request->id;
-        $quantity=$request->quantity;
-        $price=$request->price;
-        $newQuantity=$quantity-1;
-        $total_price=$newQuantity*$price;
-        $result=CartModel::Where('id',$id)->update(['product_qty' => $newQuantity, 'product_total_price' => $total_price]);
+        $cart = CartModel::where('id', $id)->get();
+        $price=$cart[0]['product_unit_price'];
+        $old_qty = $cart[0]['product_qty'];
+        $newQuantity=$old_qty-1;
+        if($newQuantity<0)
+        {
+            return "Quantity will not be decreased";
+        }
+        else{
+            $total_price=$newQuantity*$price;
+            $result=CartModel::Where('id',$id)->update(['product_qty' => $newQuantity, 'product_total_price' => $total_price]);
+            return $result;
+        }
+    }
+    
+    function RemoveCartList(Request $request){
+        $id=$request->id;
+        $result=CartModel::Where('id',$id)->delete();
         return $result;
     }
-
 
     function CartList(Request $request){
         $user_id=$request->user_id;

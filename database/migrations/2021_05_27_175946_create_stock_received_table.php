@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TransactionTable extends Migration
+class CreateStockReceivedTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,18 @@ class TransactionTable extends Migration
      */
     public function up()
     {
-        Schema::create('transaction_list',function (Blueprint $table){
+        Schema::create('stock_received', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('invoice_no',200);
-            $table->date('invoice_date',200);
+            $table->date('received_date',200);
             $table->string('product_name',200);
+            $table->string('product_code',200);
+            $table->string('product_category',200);
             $table->bigInteger('product_qty');
             $table->bigInteger('product_unit_price');
             $table->bigInteger('product_total_price');
-            $table->string('seller_name',200);
-            $table->string('user_name',200);
             $table->string('product_icon',200);
-
+          
         });
     }
 
@@ -35,6 +35,6 @@ class TransactionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaction_list');
+        Schema::dropIfExists('stock_received');
     }
 }

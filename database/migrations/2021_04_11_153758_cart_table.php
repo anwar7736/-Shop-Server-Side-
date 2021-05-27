@@ -18,9 +18,9 @@ class CartTable extends Migration
             $table->string('invoice_no',200);
             $table->date('invoice_date',200);
             $table->string('product_name',200);
-            $table->integer('product_qty',200);
-            $table->integer('product_unit_price',200);
-            $table->integer('product_total_price',200);
+            $table->bigInteger('product_qty');
+            $table->bigInteger('product_unit_price');
+            $table->bigInteger('product_total_price');
             $table->string('seller_name',200);
             $table->string('user_id',200);
             $table->string('product_icon',200);

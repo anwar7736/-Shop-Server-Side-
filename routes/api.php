@@ -9,6 +9,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StockReceivedController;
+use App\Http\Controllers\StockDecreaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -59,8 +61,8 @@ Route::get('/IncomeLast7Days',[DashboardController::class,'IncomeLast7Days']);
 
 // Cart
 Route::post('/CartAdd',[CartController::class,'CartAdd']);
-Route::get('/CartItemPlus/{id}/{quantity}/{price}',[CartController::class,'CartItemPlus']);
-Route::get('/CartItemMinus/{id}/{quantity}/{price}',[CartController::class,'CartItemMinus']);
+Route::get('/CartItemPlus/{id}',[CartController::class,'CartItemPlus']);
+Route::get('/CartItemMinus/{id}',[CartController::class,'CartItemMinus']);
 Route::get('/RemoveCartList/{id}',[CartController::class,'RemoveCartList']);
 Route::get('/CartList/{user_id}',[CartController::class,'CartList']);
 Route::get('/TotalOrderValue/{user_id}',[CartController::class,'TotalOrderValue']);
@@ -74,11 +76,18 @@ Route::get('/CartSale/{user_id}',[TransactionController::class,'CartSale']);
 Route::get('/TransactionList',[ReportController::class,'TransactionList']);
 Route::post('/TransactionListByDate',[ReportController::class,'TransactionListByDate']);
 Route::get('/CurrentStockReport',[CurrentStockController::class,'CurrentStockReport']);
+Route::get('/ReceivedAllStockData',[StockReceivedController::class,'ReceivedAllStockData']);
+Route::post('/ReportFilterByDate',[StockReceivedController::class,'ReportFilterByDate']);
+Route::post('/DecreaseFilterByDate',[StockReceivedController::class,'DecreaseFilterByDate']);
+Route::get('/DecreaseAllStockData',[StockDecreaseController::class,'DecreaseAllStockData']);
+Route::post('/DecreaseReportFilterByDate',[StockDecreaseController::class,'DecreaseReportFilterByDate']);
 
-//Current Stock 
-Route::post('/UpdateCurrentStock',[CurrentStockController::class,'UpdateCurrentStock']);
 
+//Stock Received 
+Route::post('/StockReceived',[StockReceivedController::class,'StockReceived']);
 
+//Stock Decrease 
+Route::post('/StockDecrease',[StockDecreaseController::class,'StockDecrease']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
