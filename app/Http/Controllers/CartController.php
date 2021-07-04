@@ -12,6 +12,7 @@ class CartController extends Controller
         $invoice_no = rand(11111111,99999999);
         date_default_timezone_set("Asia/Dhaka");
         $invoice_date= date('Y-m-d');
+        $product_code=$request->input('product_code');
         $product_name=$request->input('product_name');
         $product_qty=$request->input('product_qty');
         $user_id=$request->input('user_id');
@@ -25,10 +26,10 @@ class CartController extends Controller
         if($isInsert===1)
         {
             $cart = CartModel::where('product_name', $product_name)->where('user_id', $user_id)->get();
-            $newQuantity = $cart[0]['product_qty'] + $product_qty;
+            $newQuantity = $cart[0]['qty'] + $product_qty;
             $product_total_price = $product_unit_price * $newQuantity;
             $result=CartModel::where('product_name', $product_name)->where('user_id', $user_id)->update([
-            "product_qty"=>$newQuantity,
+            "qty"=>$newQuantity,
             "product_total_price"=>$product_total_price
         ]);
         return $result;
@@ -39,8 +40,9 @@ class CartController extends Controller
         $result=CartModel::insert([
             "invoice_no"=>$invoice_no,
             "invoice_date"=>$invoice_date,
+            "product_code"=>$product_code,
             "product_name"=>$product_name,
-            "product_qty"=>$product_qty,
+            "qty"=>$product_qty,
             "product_unit_price"=>$product_unit_price,
             "product_total_price"=>$total_price,
             "seller_name"=>$seller_name,
@@ -56,10 +58,10 @@ class CartController extends Controller
         $id=$request->id;
         $cart = CartModel::where('id', $id)->get();
         $price=$cart[0]['product_unit_price'];
-        $old_qty = $cart[0]['product_qty'];
+        $old_qty = $cart[0]['qty'];
         $newQuantity=$old_qty+1;
         $total_price=$newQuantity*$price;
-        $result=CartModel::Where('id',$id)->update(['product_qty' => $newQuantity, 'product_total_price' => $total_price]);
+        $result=CartModel::Where('id',$id)->update(['qty' => $newQuantity, 'product_total_price' => $total_price]);
         return $result;
     }
 
@@ -67,7 +69,7 @@ class CartController extends Controller
         $id=$request->id;
         $cart = CartModel::where('id', $id)->get();
         $price=$cart[0]['product_unit_price'];
-        $old_qty = $cart[0]['product_qty'];
+        $old_qty = $cart[0]['qty'];
         $newQuantity=$old_qty-1;
         if($newQuantity<0)
         {
@@ -75,7 +77,7 @@ class CartController extends Controller
         }
         else{
             $total_price=$newQuantity*$price;
-            $result=CartModel::Where('id',$id)->update(['product_qty' => $newQuantity, 'product_total_price' => $total_price]);
+            $result=CartModel::Where('id',$id)->update(['qty' => $newQuantity, 'product_total_price' => $total_price]);
             return $result;
         }
     }

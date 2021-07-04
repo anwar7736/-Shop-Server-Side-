@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 */
 //Login
 Route::post('/login', [LoginController::class,'onLogin']);
+Route::post('/RecoverPassword', [LoginController::class,'RecoverPassword']);
 
 //User
 Route::post('/AddUser',[UserController::class,'AddUser']);
@@ -69,7 +70,7 @@ Route::get('/TotalOrderValue/{user_id}',[CartController::class,'TotalOrderValue'
 
 
 // Transaction
-Route::get('/CartSale/{user_id}',[TransactionController::class,'CartSale']);
+Route::get('/ConfirmSale',[TransactionController::class,'ConfirmSale']);
 
 
 //Report

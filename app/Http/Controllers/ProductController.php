@@ -21,10 +21,12 @@ class ProductController extends Controller
         if($countProduct===0)
         {
              $product_icon= $image->store('public');
+             $img_name = explode('/', $product_icon)[1];
+             $image_path = 'http://'.$_SERVER['HTTP_HOST'].'/storage/'.$img_name;
              $result=ProductModel::insert([
              "product_name"=>$product_name,
              "product_code"=>$product_code,
-             "product_icon"=>$product_icon,
+             "product_icon"=> $image_path,
              "product_price"=>$product_price,
              "product_category"=>$product_category,
              "product_remarks"=>$product_remarks

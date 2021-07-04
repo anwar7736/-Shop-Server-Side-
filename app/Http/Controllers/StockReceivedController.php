@@ -32,7 +32,7 @@ class StockReceivedController extends Controller
     	$unit_price = $isInsert['product_unit_price'];
     	$newQty = $old_qty + $product_qty;
     	$total_price = $unit_price * $newQty;
-    		$result = StockReceivedModel::where('product_code', $product_code)->update([
+    	$result = StockReceivedModel::where('product_code', $product_code)->update([
     			'product_qty'=> $newQty,
     			'product_total_price'=> $total_price
     		]);

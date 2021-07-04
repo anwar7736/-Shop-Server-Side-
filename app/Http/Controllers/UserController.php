@@ -12,6 +12,7 @@ class UserController extends Controller
     function AddUser(Request $request){
        $name= $request->input('name');
        $username= $request->input('username');
+       $email= $request->input('email');
        $password= Hash::make($request->input('password'));
        $roll= $request->input('roll');
        $userCount= UserModel::Where('username',$username)->count();
@@ -19,7 +20,8 @@ class UserController extends Controller
             return "Username already exists";
        }
        else{
-          $result= UserModel::insert(["fullname"=>$name, "username"=>$username, "roll"=>$roll, "lastactivity"=>"No Activity", "password"=>$password]);
+          $result= UserModel::insert(["fullname"=>$name, "username"=>$username, "email"=>$email, "roll"=>$roll,
+            "password"=>$password]);
           return $result;
        }
     }
@@ -44,13 +46,13 @@ class UserController extends Controller
         $id= $request->input('id');
         $name= $request->input('name');
         $username= $request->input('username');
-        $password= Hash::make($request->input('password'));
+        $email= $request->input('email');
         $roll= $request->input('roll');
         $currentUser= UserModel::Where('username',$username)->where('id',$id)->count();
         $userCount= UserModel::Where('username',$username)->count();
            if($currentUser===1 || $userCount===0)
            {
-              $result= UserModel::Where('id',$id)->update(["fullname"=>$name, "username"=>$username, "roll"=>$roll, "lastactivity"=>"No Activity", "password"=>$password]);
+              $result= UserModel::Where('id',$id)->update(["fullname"=>$name, "username"=>$username, "roll"=>$roll,"email"=>$email]);
               return $result;
            }
            else{
