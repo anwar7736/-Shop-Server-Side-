@@ -22,7 +22,7 @@ class StockReceivedController extends Controller
     	$isInsert = StockReceivedModel::where('product_code', $product_code)->where('received_date', $received_date)->first();
 
         $isStock = CurrentStockModel::where('product_code', $product_code)->first();
-        $old_stock_qty = $isStock['product_qty'];
+        $old_stock_qty = $isStock->product_qty;
         $new_stock_qty = $old_stock_qty + $product_qty;
         $total_stock_amount =$product_unit_price * $new_stock_qty;
 
@@ -47,9 +47,9 @@ class StockReceivedController extends Controller
     	}
     	else{
 
-            if($product_qty==0 || $product_qty > $old_stock_qty)
+            if($product_qty==0)
             {
-                return;
+                return 0;
             }
 
             else{
@@ -79,14 +79,16 @@ class StockReceivedController extends Controller
     	}
     }
     function ReceivedAllStockData(){
-    	$result = StockReceivedModel::all();
-    	return $result;
+        $result = StockReceivedModel::all();
+    	$sum = StockReceivedModel::sum('product_total_price');
+    	return array($result, $sum);
     }
     function ReportFilterByDate(Request $request){
     	$from_date = $request->input('from_date');
         $to_date   = $request->input('to_date');
         $result    = StockReceivedModel::whereBetween('received_date', array($from_date, $to_date))
         			 					->orderBy('id','desc')->get();
-        return  $result;
+        $sum = StockReceivedModel::whereBetween('received_date', array($from_date, $to_date))->sum('product_total_price');
+        return array($result, $sum);
     }
 }

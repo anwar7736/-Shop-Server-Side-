@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2021 at 11:39 PM
+-- Generation Time: Jul 06, 2021 at 01:30 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -60,16 +60,14 @@ CREATE TABLE `category_list` (
 --
 
 INSERT INTO `category_list` (`id`, `cat_name`, `cat_code`, `cat_icon`) VALUES
-(1, 'Mobile', '1621873359', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(2, 'TV', '1621873368', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(3, 'Laptop', '1621873376', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(4, 'Monitor', '1621873388', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(5, 'Headphone', '1621873401', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(6, 'Refrigerator', '1622040197', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(7, 'Desktop PC', '1622040245', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(8, 'Printer', '1622040256', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(9, 'Harware Accessories', '1622040276', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(14, 'Electronics', '1625434617', 'http://localhost:8000/storage/gEVCxDWC4I3wFaZ8F2ee5EHp0WHLQMMG2B0lsOMU.jpg');
+(1, 'Mobile', '1621873359', 'http://localhost:8000/storage/LFVuwAkuxkNg3FDZJSHuRBQfEY1ioJejnqclL5OJ.jpg'),
+(2, 'TV', '1621873368', 'http://localhost:8000/storage/Wib0ksVVljx66bZkFCRyHkxlBNipPEwtdzJZOkyh.jpg'),
+(3, 'Laptop', '1621873376', 'http://localhost:8000/storage/pUrT3QSclvJh8mgTKR0W76xOYR42GaXlt9H4lXrb.jpg'),
+(4, 'Monitor', '1621873388', 'http://localhost:8000/storage/tuvHHVvtVbwJ5OqBt8rzJ2CXXujyLoPjjoSTaepu.jpg'),
+(6, 'Refrigerator', '1622040197', 'http://localhost:8000/storage/HlghjzK2GxQcz3iOwdPz1TEZsGuknNEkechwvspG.jpg'),
+(7, 'Desktop PC', '1622040245', 'http://localhost:8000/storage/XVpN2yKHfsrlZnNcA9dYHqAaalxOAiSbI3uqQVsp.jpg'),
+(8, 'Printer', '1622040256', 'http://localhost:8000/storage/xXsrQcfJKEV6XlvegwzWC8OIA8CXIR5TQJi7PaO5.jpg'),
+(14, 'Electronics', '1625434617', 'http://localhost:8000/storage/xDqAze7CfLoKNa1G0VHKNdzpAhp63Hi1Un2MhxsC.jpg');
 
 -- --------------------------------------------------------
 
@@ -94,13 +92,12 @@ CREATE TABLE `current_stock` (
 --
 
 INSERT INTO `current_stock` (`id`, `product_name`, `product_code`, `product_icon`, `product_category`, `product_price`, `product_qty`, `total_price`, `product_remarks`) VALUES
-(1, 'Vivo ZX Pro', '1621873441', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', 'Mobile', 15000, 11, 165000, 'Good things'),
-(2, 'Vivo Y11', '1621873482', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', 'Mobile', 12999, 8, 103992, 'Good things'),
-(3, 'Walton TV', '1621873511', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', 'TV', 9000, 2, 18000, 'Good things'),
-(4, 'HP Laptop', '1621873536', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', 'Laptop', 45000, 1, 45000, 'Good things'),
-(5, 'Samsung LED Montor', '1621873579', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', 'Monitor', 8000, 0, 0, 'Good things'),
-(6, 'Remax Original', '1621873607', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', 'Headphone', 250, 12, 3000, 'Good things'),
-(27, 'asdfds', '1625434653', 'public/mARbWO3ED93wg58Zi44PoAwxmBW1GZ0Ewp1j50zx.jpg', 'Desktop PC', 145, 0, 0, '25');
+(1, 'Vivo ZX Pro', '1621873441', 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg', 'Mobile', 15000, 31, 465000, 'Good things'),
+(2, 'Vivo Y11', '1621873482', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg', 'Mobile', 12999, 85, 1104915, 'Good things'),
+(3, 'Walton TV', '1621873511', 'http://localhost:8000/storage/YyELUPV2C0SnRcG6lSnY8ZZYcYgJd1rSj64D1HTS.jpg', 'TV', 9000, 97, 873000, 'Good things'),
+(4, 'HP Laptop', '1621873536', 'http://localhost:8000/storage/lBLUlK89O4vMRWyzwEL24VLDYuuMqURO4CxyV9lG.jpg', 'Laptop', 45000, 10, 450000, 'Good things'),
+(6, 'Remax Original', '1621873607', 'http://localhost:8000/storage/6zRY5K9R0i3huCVV8eWpcbUQiKddZ64gE5jQmHTo.jpg', 'Headphone', 250, 44, 11000, 'Good things'),
+(29, 'Samsung LED Monitor', '1625512610', 'http://localhost:8000/storage/FPAXTXsuQtk3LmcO9chfRZgXeBzDzOjgn6eC2wCH.jpg', 'Monitor', 10000, 19, 190000, '152222');
 
 -- --------------------------------------------------------
 
@@ -125,8 +122,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (23, '2021_05_27_175946_create_stock_received_table', 2),
 (24, '2021_05_27_180621_create_stock_decrease_table', 2),
 (25, '2021_04_11_153758_cart_table', 3),
-(26, '2021_04_11_133721_transaction_table', 4),
-(27, '2021_04_09_164119_user_list_table', 5);
+(27, '2021_04_09_164119_user_list_table', 5),
+(28, '2021_04_11_133721_transaction_table', 6);
 
 -- --------------------------------------------------------
 
@@ -149,12 +146,12 @@ CREATE TABLE `product_list` (
 --
 
 INSERT INTO `product_list` (`id`, `product_name`, `product_code`, `product_icon`, `product_price`, `product_category`, `product_remarks`) VALUES
-(1, 'Vivo ZX Pro', '1621873441', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', '15000', 'Mobile', 'Good things'),
-(2, 'Vivo Y11', '1621873482', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', '12999', 'Mobile', 'Good things'),
-(3, 'Walton TV', '1621873511', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', '9000', 'TV', 'Good things'),
-(4, 'HP Laptop', '1621873536', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', '45000', 'Laptop', 'Good things'),
-(5, 'Samsung LED Monitor', '1621873579', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', '8000', 'Monitor', 'Good things'),
-(6, 'Remax Original', '1621873607', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg', '250', 'Headphone', 'Good things');
+(1, 'Vivo ZX Pro', '1621873441', 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg', '15000', 'Mobile', 'Good things'),
+(2, 'Vivo Y11', '1621873482', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg', '12999', 'Mobile', 'Good things'),
+(3, 'Walton TV', '1621873511', 'http://localhost:8000/storage/YyELUPV2C0SnRcG6lSnY8ZZYcYgJd1rSj64D1HTS.jpg', '9000', 'TV', 'Good things'),
+(4, 'HP Laptop', '1621873536', 'http://localhost:8000/storage/lBLUlK89O4vMRWyzwEL24VLDYuuMqURO4CxyV9lG.jpg', '45000', 'Laptop', 'Good things'),
+(6, 'Remax Original', '1621873607', 'http://localhost:8000/storage/6zRY5K9R0i3huCVV8eWpcbUQiKddZ64gE5jQmHTo.jpg', '250', 'Headphone', 'Good things'),
+(30, 'Samsung LED Monitor', '1625512610', 'http://localhost:8000/storage/FPAXTXsuQtk3LmcO9chfRZgXeBzDzOjgn6eC2wCH.jpg', '10000', 'Monitor', '152222');
 
 -- --------------------------------------------------------
 
@@ -185,7 +182,9 @@ INSERT INTO `stock_decrease` (`id`, `decrease_reason`, `decrease_date`, `product
 (10, 'Stock Adjustment', '2021-05-21', 'Vivo ZX Pro', '1621873441', 'Mobile', 2, 15000, 30000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
 (11, 'Stock Adjustment', '2021-05-18', 'Vivo ZX Pro', '1621873441', 'Mobile', 2, 15000, 30000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
 (12, 'Stock Adjustment', '2021-07-04', 'HP Laptop', '1621873536', 'Laptop', 4, 45000, 180000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(13, 'sdafa', '2021-07-04', 'Walton TV', '1621873511', 'TV', 2, 9000, 18000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg');
+(13, 'Stock Adjustment', '2021-07-04', 'Walton TV', '1621873511', 'TV', 2, 9000, 18000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(14, 'Stock Adjustment', '2021-07-06', 'Walton TV', '1621873511', 'TV', 1, 9000, 9000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(15, 'Stock Adjustment', '2021-07-06', 'Samsung LED Monitor', '1621873579', 'Monitor', 1, 8000, 8000, 'public/JNBhaevkScGeqlZrGwM0cpQGI2uwrecuMm5JgznS.jpg');
 
 -- --------------------------------------------------------
 
@@ -211,15 +210,23 @@ CREATE TABLE `stock_received` (
 --
 
 INSERT INTO `stock_received` (`id`, `invoice_no`, `received_date`, `product_name`, `product_code`, `product_category`, `product_qty`, `product_unit_price`, `product_total_price`, `product_icon`) VALUES
-(20, 'INV28052021', '2021-05-28', 'Vivo ZX Pro', '1621873441', 'Mobile', 2, 15000, 30000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(21, 'INV28052021', '2021-05-20', 'Vivo ZX Pro', '1621873441', 'Mobile', 2, 15000, 30000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(22, 'INV28052021', '2021-05-21', 'Vivo ZX Pro', '1621873441', 'Mobile', 2, 15000, 30000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(23, 'INV28052021', '2021-05-25', 'Vivo ZX Pro', '1621873441', 'Mobile', 2, 15000, 30000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(24, 'ff', '2021-07-04', 'Vivo Y11', '1621873482', 'Mobile', 1, 12999, 12999, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(25, 'sdff', '2021-07-04', 'Walton TV', '1621873511', 'TV', 7, 9000, 63000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(26, 'sdfgf', '2021-07-05', 'Vivo ZX Pro', '1621873441', 'Mobile', 1, 15000, 15000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(27, 'sdfgf', '2021-07-05', 'Walton TV', '1621873511', 'TV', 1, 9000, 9000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(28, 'sdfgf', '2021-07-05', 'HP Laptop', '1621873536', 'Laptop', 1, 45000, 45000, 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg');
+(20, 'INV28052021', '2021-05-28', 'Vivo ZX Pro', '1621873441', 'Mobile', 48, 15000, 720000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(21, 'INV28052021', '2021-05-20', 'Vivo ZX Pro', '1621873441', 'Mobile', 48, 15000, 720000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(22, 'INV28052021', '2021-05-21', 'Vivo ZX Pro', '1621873441', 'Mobile', 48, 15000, 720000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(23, 'INV28052021', '2021-05-25', 'Vivo ZX Pro', '1621873441', 'Mobile', 48, 15000, 720000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(24, 'INV202043', '2021-07-04', 'Vivo Y11', '1621873482', 'Mobile', 6, 12999, 77994, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(25, 'INV202041', '2021-07-04', 'Walton TV', '1621873511', 'TV', 9, 9000, 81000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(26, 'INV202045', '2021-07-05', 'Vivo ZX Pro', '1621873441', 'Mobile', 48, 15000, 720000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(27, 'INV202047', '2021-07-05', 'Walton TV', '1621873511', 'TV', 9, 9000, 81000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(28, 'INV202043', '2021-07-05', 'HP Laptop', '1621873536', 'Laptop', 6, 45000, 270000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(29, 'INV202043', '2021-07-06', 'Vivo Y11', '1621873482', 'Mobile', 6, 12999, 77994, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(30, 'INV202043', '2021-07-06', 'Vivo ZX Pro', '1621873441', 'Mobile', 48, 15000, 720000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(31, 'INV202043', '2021-07-06', 'Walton TV', '1621873511', 'TV', 9, 9000, 81000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(32, 'INV202041', '2021-07-06', 'HP Laptop', '1621873536', 'Laptop', 6, 45000, 270000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(33, 'INV202047', '2021-07-06', 'Samsung LED Monitor', '1621873579', 'Monitor', 4, 8000, 32000, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(34, 'INV202045', '2021-07-06', 'INV202022', '1625434653', 'Desktop PC', 3, 145, 435, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(35, 'INV202022', '2021-07-06', 'Boiler Egg', '1625499740', 'Meat & Fish', 5, 1520, 7600, 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(36, 'INV20343430', '2021-07-06', 'Samsung LED Monitor', '1625512610', 'Monitor', 1, 10000, 10000, 'http://localhost:8000/storage/FPAXTXsuQtk3LmcO9chfRZgXeBzDzOjgn6eC2wCH.jpg');
 
 -- --------------------------------------------------------
 
@@ -229,6 +236,7 @@ INSERT INTO `stock_received` (`id`, `invoice_no`, `received_date`, `product_name
 
 CREATE TABLE `transaction_list` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `memo_no` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `invoice_no` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `invoice_date` date NOT NULL,
   `product_code` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -237,7 +245,6 @@ CREATE TABLE `transaction_list` (
   `product_unit_price` bigint(20) NOT NULL,
   `product_total_price` bigint(20) NOT NULL,
   `seller_name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `order_id` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `product_icon` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -245,30 +252,72 @@ CREATE TABLE `transaction_list` (
 -- Dumping data for table `transaction_list`
 --
 
-INSERT INTO `transaction_list` (`id`, `invoice_no`, `invoice_date`, `product_code`, `product_name`, `product_qty`, `product_unit_price`, `product_total_price`, `seller_name`, `order_id`, `product_icon`) VALUES
-(1, '27895838', '2021-07-04', '1621873511', 'Walton TV', 2, 9000, 18000, 'Md Anwar Hossain', '1', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(2, '27445343', '2021-07-04', '1621873441', 'Vivo ZX Pro', 1, 15000, 15000, 'Md Anwar Hossain', '1', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(3, '47345220', '2021-07-04', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', '1', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(4, '85567063', '2021-07-04', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', '1', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(5, '49431767', '2021-07-04', '1621873579', 'Samsung LED Montor', 1, 8000, 8000, 'Md Anwar Hossain', '1', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(6, '71811808', '2021-07-04', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', '1', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(7, '11722555', '2021-07-04', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', '1', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(8, '87231095', '2021-07-04', '1621873441', 'Vivo ZX Pro', 1, 15000, 15000, 'Md Anwar Hossain', '2', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(9, '25586270', '2021-07-04', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', '2', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(10, '71056786', '2021-07-04', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', '3', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(11, '46949747', '2021-07-04', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', '4', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(12, '44514200', '2021-07-04', '1621873579', 'Samsung LED Montor', 3, 8000, 24000, 'Md Anwar Hossain', '4', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(13, '58763392', '2021-07-04', '1621873441', 'Vivo ZX Pro', 1, 15000, 15000, 'Md Anwar Hossain', '5', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(14, '11475461', '2021-07-04', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', '5', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(15, '16645684', '2021-07-04', '1621873511', 'Walton TV', 1, 9000, 9000, 'Md Anwar Hossain', '5', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(16, '32903116', '2021-07-04', '1621873536', 'HP Laptop', 2, 45000, 90000, 'Md Anwar Hossain', '6', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(17, '50683618', '2021-07-04', '1621873536', 'HP Laptop', 8, 45000, 360000, 'Md Anwar Hossain', '7', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(18, '79685240', '2021-07-04', '1621873579', 'Samsung LED Montor', 1, 8000, 8000, 'Md Anwar Hossain', '7', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(19, '65978691', '2021-07-04', '1621873607', 'Remax Original', 2, 250, 500, 'Md Anwar Hossain', '7', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(20, '28056344', '2021-07-04', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', '8', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(21, '89541092', '2021-07-05', '1621873579', 'Samsung LED Montor', 1, 8000, 8000, 'Md Anwar Hossain', '9', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(22, '19649397', '2021-07-05', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', '10', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
-(23, '33034538', '2021-07-05', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', '11', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg');
+INSERT INTO `transaction_list` (`id`, `memo_no`, `invoice_no`, `invoice_date`, `product_code`, `product_name`, `product_qty`, `product_unit_price`, `product_total_price`, `seller_name`, `product_icon`) VALUES
+(8, '1010', '93182654', '2021-07-06', '1621873441', 'Vivo ZX Pro', 1, 15000, 15000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(9, '1010', '90692538', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(10, '1010', '63601843', '2021-07-06', '1621873511', 'Walton TV', 1, 9000, 9000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(11, '1010', '19211756', '2021-07-06', '1621873536', 'HP Laptop', 3, 45000, 135000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(12, '1010', '42368585', '2021-07-06', '1621873579', 'Samsung LED Monitor', 1, 8000, 8000, 'Md Anwar Hossain', 'public/JNBhaevkScGeqlZrGwM0cpQGI2uwrecuMm5JgznS.jpg'),
+(13, '1010', '75874770', '2021-07-06', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', 'http://localhost:8000/storage/OzJOxpDAxgQqENGlCi3RF8SStT9VxOK0yTQaDegh.jpg'),
+(14, '1011', '81601551', '2021-07-06', '1621873441', 'Vivo ZX Pro', 2, 15000, 30000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(15, '1011', '49739553', '2021-07-06', '1621873482', 'Vivo Y11', 2, 12999, 25998, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(16, '1012', '49160983', '2021-07-06', '1621873579', 'Samsung LED Monitor', 1, 8000, 8000, 'Md Anwar Hossain', 'public/JNBhaevkScGeqlZrGwM0cpQGI2uwrecuMm5JgznS.jpg'),
+(17, '1013', '33479962', '2021-07-06', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(18, '1013', '34369626', '2021-07-06', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', 'http://localhost:8000/storage/OzJOxpDAxgQqENGlCi3RF8SStT9VxOK0yTQaDegh.jpg'),
+(19, '1014', '33479962', '2021-07-06', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(20, '1014', '34369626', '2021-07-06', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', 'http://localhost:8000/storage/OzJOxpDAxgQqENGlCi3RF8SStT9VxOK0yTQaDegh.jpg'),
+(21, '1015', '33479962', '2021-07-06', '1621873536', 'HP Laptop', 2, 45000, 90000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(22, '1015', '34369626', '2021-07-06', '1621873607', 'Remax Original', 2, 250, 500, 'Md Anwar Hossain', 'http://localhost:8000/storage/OzJOxpDAxgQqENGlCi3RF8SStT9VxOK0yTQaDegh.jpg'),
+(23, '1016', '17132692', '2021-07-06', '1621873441', 'Vivo ZX Pro', 1, 15000, 15000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(24, '1016', '36790034', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(25, '1016', '80990382', '2021-07-06', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', 'http://localhost:8000/storage/OzJOxpDAxgQqENGlCi3RF8SStT9VxOK0yTQaDegh.jpg'),
+(26, '1017', '80990382', '2021-07-06', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', 'http://localhost:8000/storage/OzJOxpDAxgQqENGlCi3RF8SStT9VxOK0yTQaDegh.jpg'),
+(27, '1018', '80990382', '2021-07-06', '1621873607', 'Remax Original', 2, 250, 500, 'Md Anwar Hossain', 'http://localhost:8000/storage/OzJOxpDAxgQqENGlCi3RF8SStT9VxOK0yTQaDegh.jpg'),
+(28, '1019', '48434751', '2021-07-06', '1621873511', 'Walton TV', 1, 9000, 9000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(29, '1020', '83436851', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(30, '1020', '48434751', '2021-07-06', '1621873511', 'Walton TV', 1, 9000, 9000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(31, '1021', '83436851', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(32, '1021', '48434751', '2021-07-06', '1621873511', 'Walton TV', 1, 9000, 9000, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(33, '1022', '83436851', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(34, '1023', '83436851', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/0k9UnVgRrzJOZvD1DCDYpQNvTZl6H7DF69w9V9ij.jpg'),
+(35, '1024', '93969407', '2021-07-06', '1621873441', 'Vivo ZX Pro', 1, 15000, 15000, 'Md Anwar Hossain', 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(36, '1024', '45974686', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(37, '1025', '93969407', '2021-07-06', '1621873441', 'Vivo ZX Pro', 1, 15000, 15000, 'Md Anwar Hossain', 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(38, '1025', '45974686', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(39, '1026', '93969407', '2021-07-06', '1621873441', 'Vivo ZX Pro', 2, 15000, 30000, 'Md Anwar Hossain', 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(40, '1026', '45974686', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(41, '1027', '93969407', '2021-07-06', '1621873441', 'Vivo ZX Pro', 2, 15000, 30000, 'Md Anwar Hossain', 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(42, '1027', '45974686', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(43, '1028', '88329092', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(44, '1028', '32811290', '2021-07-06', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', 'http://localhost:8000/storage/lBLUlK89O4vMRWyzwEL24VLDYuuMqURO4CxyV9lG.jpg'),
+(45, '1028', '38684374', '2021-07-06', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', 'http://localhost:8000/storage/6zRY5K9R0i3huCVV8eWpcbUQiKddZ64gE5jQmHTo.jpg'),
+(46, '1029', '88329092', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(47, '1029', '32811290', '2021-07-06', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', 'http://localhost:8000/storage/lBLUlK89O4vMRWyzwEL24VLDYuuMqURO4CxyV9lG.jpg'),
+(48, '1029', '38684374', '2021-07-06', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', 'http://localhost:8000/storage/6zRY5K9R0i3huCVV8eWpcbUQiKddZ64gE5jQmHTo.jpg'),
+(49, '1030', '88329092', '2021-07-06', '1621873482', 'Vivo Y11', 2, 12999, 25998, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(50, '1030', '32811290', '2021-07-06', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', 'http://localhost:8000/storage/lBLUlK89O4vMRWyzwEL24VLDYuuMqURO4CxyV9lG.jpg'),
+(51, '1030', '38684374', '2021-07-06', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', 'http://localhost:8000/storage/6zRY5K9R0i3huCVV8eWpcbUQiKddZ64gE5jQmHTo.jpg'),
+(52, '1031', '88329092', '2021-07-06', '1621873482', 'Vivo Y11', 2, 12999, 25998, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(53, '1032', '88329092', '2021-07-06', '1621873482', 'Vivo Y11', 2, 12999, 25998, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(54, '1033', '50331170', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(55, '1033', '19454497', '2021-07-06', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', 'http://localhost:8000/storage/lBLUlK89O4vMRWyzwEL24VLDYuuMqURO4CxyV9lG.jpg'),
+(56, '1034', '50331170', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(57, '1034', '19454497', '2021-07-06', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', 'http://localhost:8000/storage/lBLUlK89O4vMRWyzwEL24VLDYuuMqURO4CxyV9lG.jpg'),
+(58, '1035', '46263952', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(59, '1035', '44352225', '2021-07-06', '1621873511', 'Walton TV', 1, 9000, 9000, 'Md Anwar Hossain', 'http://localhost:8000/storage/YyELUPV2C0SnRcG6lSnY8ZZYcYgJd1rSj64D1HTS.jpg'),
+(60, '1035', '95563448', '2021-07-06', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', 'http://localhost:8000/storage/lBLUlK89O4vMRWyzwEL24VLDYuuMqURO4CxyV9lG.jpg'),
+(61, '1036', '43430750', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(62, '1036', '99774924', '2021-07-06', '1621873511', 'Walton TV', 1, 9000, 9000, 'Md Anwar Hossain', 'http://localhost:8000/storage/YyELUPV2C0SnRcG6lSnY8ZZYcYgJd1rSj64D1HTS.jpg'),
+(63, '1036', '17203598', '2021-07-06', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', 'http://localhost:8000/storage/6zRY5K9R0i3huCVV8eWpcbUQiKddZ64gE5jQmHTo.jpg'),
+(64, '1037', '49701191', '2021-07-06', '1621873441', 'Vivo ZX Pro', 1, 15000, 15000, 'Md Anwar Hossain', 'http://localhost:8000/storage/VO3zvJJo642ETzTarEtCv2MWMpMwhkBhOoRmtg7K.jpg'),
+(65, '1037', '84677881', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(66, '1037', '51126799', '2021-07-06', '1621873536', 'HP Laptop', 2, 45000, 90000, 'Md Anwar Hossain', 'http://localhost:8000/storage/lBLUlK89O4vMRWyzwEL24VLDYuuMqURO4CxyV9lG.jpg'),
+(67, '1037', '67727591', '2021-07-06', '1625512610', 'Samsung LED Monitor', 1, 10000, 10000, 'Md Anwar Hossain', 'public/BI22p1SPzroRQXc8UWslhS6zMpTVT7PGt0U2sa8i.jpg'),
+(68, '1038', '90991227', '2021-07-06', '1621873536', 'HP Laptop', 1, 45000, 45000, 'Md Anwar Hossain', 'http://localhost:8000/storage/lBLUlK89O4vMRWyzwEL24VLDYuuMqURO4CxyV9lG.jpg'),
+(69, '1038', '75342064', '2021-07-06', '1621873607', 'Remax Original', 1, 250, 250, 'Md Anwar Hossain', 'http://localhost:8000/storage/6zRY5K9R0i3huCVV8eWpcbUQiKddZ64gE5jQmHTo.jpg'),
+(70, '1039', '65016761', '2021-07-06', '1621873482', 'Vivo Y11', 1, 12999, 12999, 'Md Anwar Hossain', 'http://localhost:8000/storage/8TlcKN9sjXJKw1EkxTkZRJyALf19qE6vfrW3z2At.jpg'),
+(71, '1039', '52856037', '2021-07-06', '1621873511', 'Walton TV', 1, 9000, 9000, 'Md Anwar Hossain', 'http://localhost:8000/storage/YyELUPV2C0SnRcG6lSnY8ZZYcYgJd1rSj64D1HTS.jpg'),
+(72, '1039', '85812594', '2021-07-06', '1625512610', 'Samsung LED Monitor', 1, 10000, 10000, 'Md Anwar Hossain', 'public/BI22p1SPzroRQXc8UWslhS6zMpTVT7PGt0U2sa8i.jpg');
 
 -- --------------------------------------------------------
 
@@ -359,49 +408,49 @@ ALTER TABLE `user_list`
 -- AUTO_INCREMENT for table `cart_list`
 --
 ALTER TABLE `cart_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT for table `category_list`
 --
 ALTER TABLE `category_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `current_stock`
 --
 ALTER TABLE `current_stock`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `product_list`
 --
 ALTER TABLE `product_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `stock_decrease`
 --
 ALTER TABLE `stock_decrease`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `stock_received`
 --
 ALTER TABLE `stock_received`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `transaction_list`
 --
 ALTER TABLE `transaction_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `user_list`

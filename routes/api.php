@@ -71,6 +71,8 @@ Route::get('/TotalOrderValue/{user_id}',[CartController::class,'TotalOrderValue'
 
 // Transaction
 Route::get('/ConfirmSale',[TransactionController::class,'ConfirmSale']);
+Route::get('/GetInvoiceList',[TransactionController::class,'GetInvoiceList']);
+Route::get('/GetOrderDetails/{memo_no}',[TransactionController::class,'GetOrderDetails']);
 
 
 //Report
@@ -93,3 +95,4 @@ Route::post('/StockDecrease',[StockDecreaseController::class,'StockDecrease']);
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+

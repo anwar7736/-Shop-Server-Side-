@@ -52,7 +52,9 @@ class ProductController extends Controller
     function DeleteProduct(Request $request){
         $id= $request->id;
         $products= ProductModel::Where('id',$id)->get();
-        Storage::delete($products[0]['product_icon']);
+        $imageURL = $products[0]['product_icon'];
+        $imageName = explode('/', $imageURL)[4];
+        Storage::delete('public/'.$imageName);
         $result=ProductModel::Where('id', $id)->delete();
         $result=CurrentStockModel::Where('id', $id)->delete();
         return  $result;
@@ -109,18 +111,22 @@ class ProductController extends Controller
             }
             else{
                 $products = ProductModel::where('id', $id)->get();
-                Storage::delete($products[0]['product_icon']);
+                $imageURL = $products[0]['product_icon'];
+                $imageName = explode('/', $imageURL)[4];
+                Storage::delete('public/'.$imageName);
                 $product_icon = $image->store('public');
+                $imgLoc = explode('/', $product_icon)[1];
+                $image_path = 'http://'.$_SERVER['HTTP_HOST'].'/storage/'. $imgLoc;
                 $result = ProductModel::where('id', $id)->update([
                     "product_name"=>$product_name,
-                    "product_icon"=>$product_icon,
+                    "product_icon"=>$image_path,
                     "product_price"=>$product_price,
                     "product_category"=>$product_category,
                     "product_remarks"=>$product_remarks,
                 ]);
                 $result = CurrentStockModel::where('id', $id)->update([
                     "product_name"=>$product_name,
-                    "product_icon"=>$product_icon,
+                    "product_icon"=>$image_path,
                     "product_price"=>$product_price,
                     "product_category"=>$product_category,
                     "product_remarks"=>$product_remarks,

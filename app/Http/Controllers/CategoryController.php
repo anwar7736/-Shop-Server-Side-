@@ -31,8 +31,10 @@ class CategoryController extends Controller
 
     function DeleteCategory(Request $request){
         $id= $request->id;
-        $cat_icon= CategoryModel::Where('id',$id)->get(['cat_icon']);
-        Storage::delete($cat_icon[0]['cat_icon']);
+        $catDetails= CategoryModel::Where('id',$id)->get();
+        $imageURL = $catDetails[0]['cat_icon'];
+        $imageName = explode('/', $imageURL)[4];
+        Storage::delete('public/'.$imageName);
         $result=CategoryModel::Where('id', $id)->delete();
         return  $result;
     }
@@ -67,10 +69,18 @@ class CategoryController extends Controller
 				  }
               }
               else{
-                 $cat_icon= CategoryModel::Where('id',$id)->get(['cat_icon']);
-                 Storage::delete($cat_icon[0]['cat_icon']);
-                 $imagePath= $image->store('public');
-                 $result= CategoryModel::Where('id', $id)->update(['cat_name'=>$name,'cat_icon'=>$imagePath]);
+                    $catData= CategoryModel::Where('id',$id)->get();
+                    $imageURL = $catData[0]['cat_icon'];
+                    $imageName = explode('/', $imageURL)[4];
+                    Storage::delete('public/'.$imageName);
+                    $cat_icon = $image->store('public');
+                    $imgLoc = explode('/', $cat_icon)[1];
+                    $image_path = 'http://'.$_SERVER['HTTP_HOST'].'/storage/'. $imgLoc;
+                    $result= CategoryModel::Where('id', $id)
+                                          ->update([
+                                            'cat_name'=>$name,
+                                            'cat_icon'=>$image_path
+                                        ]);
                  if($result==true || $result==false)
 				  {	
 					return 1;

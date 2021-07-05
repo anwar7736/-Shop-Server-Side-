@@ -11,7 +11,8 @@ class ReportController extends Controller
 
     function TransactionList(){
         $result=  TransactionModel::orderBy('id','desc')->get();
-        return  $result;
+        $sum=  TransactionModel::sum('product_total_price');
+        return  array($result, $sum);
     }
 
     function TransactionListByDate(Request $request){
@@ -19,7 +20,8 @@ class ReportController extends Controller
         $to_date   = $request->input('to_date');
         $result    = TransactionModel::whereBetween('invoice_date', array($from_date, $to_date))
         			 ->orderBy('id','desc')->get();
-        return  $result;
+        $sum=  TransactionModel::whereBetween('invoice_date', array($from_date, $to_date))->sum('product_total_price');
+        return  array($result, $sum);
     }
 
 

@@ -81,7 +81,8 @@ class StockDecreaseController extends Controller
 
     function DecreaseAllStockData(){
     	$result = StockDecreaseModel::all();
-    	return $result;
+        $sum = StockDecreaseModel::sum('product_total_price');
+        return array($result, $sum);
     }
 
     function DecreaseReportFilterByDate(Request $request){
@@ -89,6 +90,7 @@ class StockDecreaseController extends Controller
         $to_date   = $request->input('to_date');
         $result    = StockDecreaseModel::whereBetween('decrease_date', array($from_date, $to_date))
         			 					->orderBy('id','desc')->get();
-        return  $result;
+        $sum = StockDecreaseModel::whereBetween('decrease_date', array($from_date, $to_date))->sum('product_total_price');
+        return array($result, $sum);
     }
 }

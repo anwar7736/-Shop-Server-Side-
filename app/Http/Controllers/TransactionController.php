@@ -13,7 +13,16 @@ class TransactionController extends Controller
     function ConfirmSale(Request $request){
         $cartInsertDeleteResult="";
 
+        $memo_no='';
         $last_inserted = TransactionModel::orderBy('id', 'desc')->first();
+        if($last_inserted==true)
+        {
+            $memo_no = $last_inserted->memo_no+1;
+        }
+        else
+        {
+            $memo_no = '1010';
+        }
        
         $cartList =  DB::table('cart_list')
                     ->join('current_stock', 'cart_list.product_code', 'current_stock.product_code')
@@ -27,6 +36,7 @@ class TransactionController extends Controller
         if($newQty < 0)
         {
             return $cart->product_name.' '.$cart->product_qty. ' pcs available';
+
         }
         else{
             $stockUpdate = CurrentStockModel::where('product_code', $cart->product_code)
@@ -37,6 +47,8 @@ class TransactionController extends Controller
 
             if($stockUpdate==1)
             {
+
+                    
                     $resultInsert=  TransactionModel::insert([
                     "invoice_no"=>$cart->invoice_no,
                     "invoice_date"=>$cart->invoice_date,
@@ -46,7 +58,7 @@ class TransactionController extends Controller
                     "product_unit_price"=>$cart->product_unit_price,
                     "product_total_price"=>$cart->product_total_price,
                     "seller_name"=>$cart->seller_name,
-                    "order_id"=>$last_inserted->order_id+1,
+                    "memo_no"=>$memo_no,
                     "product_icon"=>$cart->product_icon, 
 
                     ]);
@@ -62,6 +74,8 @@ class TransactionController extends Controller
                 else
                 {
                  $cartInsertDeleteResult = 0;
+                 $last_memo = TransactionModel::orderBy('id', 'desc')->first();
+                 $memo_no    = $last_memo->memo_no; 
                 }
              }
             }
@@ -70,17 +84,23 @@ class TransactionController extends Controller
        return $cartInsertDeleteResult;
 
     }
-    function Others()
+    function GetInvoiceList(Request $request)
     {
-         $user_name = DB::table('cart_list')
-                    ->join('user_list', 'cart_list.user_id', 'user_list.id')
-                    ->get('user_list.fullname');
-                    foreach($user_name as $name)
-                    {
-                         $user = $name->fullname;
-                    }
-
-        }
+         $result = TransactionModel::orderBy('memo_no', 'desc')
+                                 ->groupBy('memo_no')
+                                 ->limit(30)
+                                 ->get('memo_no');
+        return $result;
+        
+    }
+    function GetOrderDetails(Request $request)
+    {
+         $memo_no = $request->memo_no;
+         $result=  TransactionModel::where('memo_no',$memo_no)->get();
+         $sum=  TransactionModel::where('memo_no', $memo_no)->sum('product_total_price');
+         return  array($result, $sum);
+        
+    }
     
 
 

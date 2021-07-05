@@ -9,8 +9,9 @@ class CurrentStockController extends Controller
 {
     function CurrentStockReport()
     {
-    	$result = CurrentStockModel::all();
-    	return $result;
+        $result = CurrentStockModel::all();
+    	$sum = CurrentStockModel::sum('total_price');
+    	return array($result, $sum);
     }
     function UpdateCurrentStock(Request $request)
     {
