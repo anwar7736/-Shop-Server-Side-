@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\CategoryModel;
+use App\Models\ProductModel;
+use App\Models\CurrentStockModel;
+use App\Models\StockReceivedModel;
+use App\Models\StockDecreaseModel;
 use App\Models\UserModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -46,37 +50,41 @@ class CategoryController extends Controller
     
     function getCategory(Request $request){
         $id = $request->id;
-        $result= CategoryModel::where('id', $id)->first();
+        $result= CategoryModel::where('cat_code', $id)->first();
         return $result;
     }
 
 
 
     function UpdateCategory(Request $request){
-        $id= $request->input('id');
+        $cat_code= $request->input('cat_code');
         $name= $request->input('name');
         $image= $request->file('image');
-        $currentCat= CategoryModel::Where('cat_name',$name)->where('id',$id)->count();
+        $currentCat= CategoryModel::Where('cat_name',$name)->where('cat_code',$cat_code)->count();
         $catCount= CategoryModel::Where('cat_name',$name)->count();
            if($currentCat===1 || $catCount===0)
            {
               if(empty($image))
               {
-                  $result= CategoryModel::Where('id', $id)->update(['cat_name'=>$name]);
+                  $result= CategoryModel::Where('cat_code', $cat_code)->update(['cat_name'=>$name]);
+                  $result= ProductModel::Where('cat_code', $cat_code)->update(['product_category'=>$name]);
+                  $result= CurrentStockModel::Where('cat_code', $cat_code)->update(['product_category'=>$name]);
+                  $result= StockReceivedModel::Where('cat_code', $cat_code)->update(['product_category'=>$name]);
+                  $result= StockDecreaseModel::Where('cat_code', $cat_code)->update(['product_category'=>$name]);
                   if($result==true || $result==false)
 				  {	
 					return 1;
 				  }
               }
               else{
-                    $catData= CategoryModel::Where('id',$id)->get();
+                    $catData= CategoryModel::Where('cat_code', $cat_code)->get();
                     $imageURL = $catData[0]['cat_icon'];
                     $imageName = explode('/', $imageURL)[4];
                     Storage::delete('public/'.$imageName);
                     $cat_icon = $image->store('public');
                     $imgLoc = explode('/', $cat_icon)[1];
                     $image_path = 'http://'.$_SERVER['HTTP_HOST'].'/storage/'. $imgLoc;
-                    $result= CategoryModel::Where('id', $id)
+                    $result= CategoryModel::Where('cat_code', $cat_code)
                                           ->update([
                                             'cat_name'=>$name,
                                             'cat_icon'=>$image_path

@@ -71,9 +71,9 @@ class CartController extends Controller
         $price=$cart[0]['product_unit_price'];
         $old_qty = $cart[0]['qty'];
         $newQuantity=$old_qty-1;
-        if($newQuantity<0)
+        if($newQuantity===0)
         {
-            return "Quantity will not be decreased";
+            return "Quantity will not be less than 1";
         }
         else{
             $total_price=$newQuantity*$price;

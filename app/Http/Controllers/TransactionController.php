@@ -35,7 +35,7 @@ class TransactionController extends Controller
         $totalPrice = $cart->product_price * $newQty;
         if($newQty < 0)
         {
-            return $cart->product_name.' '.$cart->product_qty. ' pcs available';
+            return $cart->product_name.' '.$cart->product_qty. ' pcs available in stock';
 
         }
         else{
@@ -56,7 +56,7 @@ class TransactionController extends Controller
                     "product_name"=>$cart->product_name,
                     "product_qty"=>$cart->qty,
                     "product_unit_price"=>$cart->product_unit_price,
-                    "product_total_price"=>$cart->product_total_price,
+                    "product_total_price"=>$cart->product_unit_price * $cart->qty,
                     "seller_name"=>$cart->seller_name,
                     "memo_no"=>$memo_no,
                     "product_icon"=>$cart->product_icon, 

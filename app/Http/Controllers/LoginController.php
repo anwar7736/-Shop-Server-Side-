@@ -17,12 +17,12 @@ class LoginController extends Controller
     	{
     		if($user_info->roll==='Admin')
             {
-                return 'admin';
+                return array('admin', $user_info->fullname);
             }
 
             else
             {
-                return 'worker';
+                 return array('worker', $user_info->fullname);
             }
            
     	}

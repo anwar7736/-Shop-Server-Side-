@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CurrentStockModel;
+use App\Models\CategoryModel;
 use App\Models\StockReceivedModel;
 
 class StockReceivedController extends Controller
@@ -13,6 +14,7 @@ class StockReceivedController extends Controller
     	$product_name  = $request->input('product_name');
     	$product_code  = $request->input('product_code');
     	$product_category  = $request->input('product_category');
+        $cat_code = CategoryModel::where('cat_name', $product_category)->get();
     	$product_qty = $request->input('product_qty');
     	$product_unit_price = $request->input('product_unit_price');
     	$product_icon = $request->input('product_icon');
@@ -57,7 +59,8 @@ class StockReceivedController extends Controller
     			'invoice_no'=> $invoice_no,
     			'received_date'=> $received_date,
     			'product_name'=> $product_name,
-    			'product_code'=> $product_code,
+                'product_code'=> $product_code,
+    			'cat_code'=>$cat_code[0]['cat_code'],
     			'product_category'=> $product_category,
     			'product_unit_price'=> $product_unit_price,	
     			'product_qty'=> $product_qty,

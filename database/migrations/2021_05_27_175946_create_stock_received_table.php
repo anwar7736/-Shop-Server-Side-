@@ -19,6 +19,7 @@ class CreateStockReceivedTable extends Migration
             $table->date('received_date',200);
             $table->string('product_name',200);
             $table->string('product_code',200);
+            $table->string('cat_code',200);
             $table->string('product_category',200);
             $table->bigInteger('product_qty');
             $table->bigInteger('product_unit_price');
