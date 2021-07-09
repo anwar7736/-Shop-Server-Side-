@@ -12,7 +12,13 @@ class DashboardController extends Controller
     function CountSummary(){
         $totalProduct      =  ProductModel::count();
         $totalCategory     =  CategoryModel::count();
+<<<<<<< HEAD
         $totalTransaction  =  TransactionModel::groupBy('memo_no')->get('memo_no');
+=======
+        $totalTransaction  =  TransactionModel::orderBy('memo_no', 'desc')
+                                 ->groupBy('memo_no')
+                                 ->count();
+>>>>>>> 4de9b7d34ab71fe40edcd2813b49cd43a746870e
         $totalEarning      =  TransactionModel::sum('product_total_price');
         return [
             'products'=>$totalProduct, 
