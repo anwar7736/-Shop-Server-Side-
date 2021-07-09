@@ -14,7 +14,7 @@ class DashboardController extends Controller
         $totalCategory     =  CategoryModel::count();
         $totalTransaction  =  TransactionModel::orderBy('memo_no', 'desc')
                                  ->groupBy('memo_no')
-                                 ->get('memo_no');
+                                 ->count();
         $totalEarning      =  TransactionModel::sum('product_total_price');
         return [
             'products'=>$totalProduct, 
