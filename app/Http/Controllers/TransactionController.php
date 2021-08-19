@@ -101,6 +101,25 @@ class TransactionController extends Controller
          return  array($result, $sum);
         
     }
+
+    function DeleteSalesMemo(Request $req)
+    {
+        $memo_no = $req->input('memo_no');
+        $result = TransactionModel::where('memo_no', $memo_no)->delete();
+        return $result;
+    }
+    
+    function DeleteSalesInvoice(Request $req)
+    {
+        $invoice_no = $req->input('invoice_no');
+        $result = TransactionModel::where('invoice_no', $invoice_no)->delete();
+        return $result;
+    }
+    
+    function UpdateMemoProductQty(Request $req)
+    {
+        
+    }
     
 
 

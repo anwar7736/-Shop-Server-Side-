@@ -35,7 +35,7 @@ class ProductController extends Controller
         {
              $product_icon= $image->store('public');
              $img_name = explode('/', $product_icon)[1];
-             $image_path = 'http://'.$_SERVER['HTTP_HOST'].'/storage/'.$img_name;
+             $image_path = 'https://'.$_SERVER['HTTP_HOST'].'/storage/app/public/'.$img_name;
 
              $result=ProductModel::insert([
              "product_name"=>$product_name,
@@ -107,7 +107,6 @@ class ProductController extends Controller
         $total_price = $current_stock_product[0]['product_qty'] * $product_price;
         $cart_list_product = CartModel::where('product_code', $code)->get();
 
-
         $countProduct = ProductModel::where('product_name', $product_name)->where('product_code', $code)->count();
         $countTotal =   ProductModel::where('product_name', $product_name)->count();
 
@@ -155,7 +154,7 @@ class ProductController extends Controller
                 Storage::delete('public/'.$imageName);
                 $product_icon = $image->store('public');
                 $imgLoc = explode('/', $product_icon)[1];
-                $image_path = 'http://'.$_SERVER['HTTP_HOST'].'/storage/'. $imgLoc;
+                $image_path = 'https://'.$_SERVER['HTTP_HOST'].'/storage/app/public/'. $imgLoc;
                 $result = ProductModel::where('product_code', $code)->update([
                     "product_name"=>$product_name,
                     "product_icon"=>$image_path,
@@ -176,6 +175,7 @@ class ProductController extends Controller
                 ]); 
                 if(count($cart_list_product) > 0)
                 {
+                    $cart_total_price = $cart_list_product[0]['qty'] * $product_price;
                     $result = CartModel::where('product_code', $code)->update([
                         "product_name"=>$product_name,
                         "product_icon"=>$image_path,

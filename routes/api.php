@@ -11,19 +11,11 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\StockReceivedController;
 use App\Http\Controllers\StockDecreaseController;
+use App\Http\Controllers\PasswordController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+
 //Login
 Route::post('/login', [LoginController::class,'onLogin']);
 Route::post('/RecoverPassword', [LoginController::class,'RecoverPassword']);
@@ -34,6 +26,13 @@ Route::get('/DeleteUser/{id}',[UserController::class,'DeleteUser']);
 Route::get('/getUser/{id}',[UserController::class,'getUser']);
 Route::get('/SelectUser',[UserController::class,'SelectUser']);
 Route::post('/UpdateUser',[UserController::class,'UpdateUser']);
+
+//Password 
+Route::post('/EmailVerification', [PasswordController::class, 'EmailVerification']);
+Route::post('/GetOTPExpiration', [PasswordController::class, 'GetOTPExpiration']);
+Route::post('/OTPVerification', [PasswordController::class, 'OTPVerification']);
+Route::post('/ResetPassword', [PasswordController::class, 'ResetPassword']);
+Route::post('/ChangePassword', [PasswordController::class, 'ChangePassword']);
 
 //Category
 
@@ -73,6 +72,10 @@ Route::get('/TotalOrderValue/{user_id}',[CartController::class,'TotalOrderValue'
 Route::get('/ConfirmSale',[TransactionController::class,'ConfirmSale']);
 Route::get('/GetInvoiceList',[TransactionController::class,'GetInvoiceList']);
 Route::get('/GetOrderDetails/{memo_no}',[TransactionController::class,'GetOrderDetails']);
+Route::post('/DeleteSalesMemo',[TransactionController::class,'DeleteSalesMemo']);
+Route::post('/DeleteSalesInvoice',[TransactionController::class,'DeleteSalesInvoice']);
+Route::post('/UpdateMemoProductQty',[TransactionController::class,'UpdateMemoProductQty']);
+
 
 
 //Report

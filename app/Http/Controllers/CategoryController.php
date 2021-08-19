@@ -26,7 +26,7 @@ class CategoryController extends Controller
        else{
         $imagePath= $image->store('public');
         $img_name = explode('/', $imagePath)[1];
-        $image_path = 'http://'.$_SERVER['HTTP_HOST'].'/storage/'.$img_name;
+        $image_path = 'https://'.$_SERVER['HTTP_HOST'].'/storage/app/public/'.$img_name;
         $result= CategoryModel::insert(['cat_name'=>$name, 'cat_code'=>$cat_code, 'cat_icon'=>$image_path]);
         return $result;
        }
@@ -83,7 +83,7 @@ class CategoryController extends Controller
                     Storage::delete('public/'.$imageName);
                     $cat_icon = $image->store('public');
                     $imgLoc = explode('/', $cat_icon)[1];
-                    $image_path = 'http://'.$_SERVER['HTTP_HOST'].'/storage/'. $imgLoc;
+                    $image_path = 'https://'.$_SERVER['HTTP_HOST'].'/storage/app/public/'. $imgLoc;
                     $result= CategoryModel::Where('cat_code', $cat_code)
                                           ->update([
                                             'cat_name'=>$name,
